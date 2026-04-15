@@ -1,0 +1,155 @@
+{% extends "base1.html" %} {% block content %}
+
+
+
+<body style="background-image:url('static/greenbg.jpg'); background-size:cover;">
+
+<div class="col-md-6" style="padding:20px; background-color:honeydew;">
+
+	<h2>Image Classifier</h2>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+</div>	
+
+
+	<div id="sol0" class='bg-white' style="margin-top:20px;">
+	
+	<h2 class='text-danger' >Remediess for Corn common rust</h2>
+	
+	<p class="justify-left" >
+	
+	To reduce the incidence of corn rust, plant only corn that has resistance to the fungus. Resistance is either in the form of race-specific resistance or partial rust resistance. 
+	<br/>No sweet corn is completely resistant. If the corn begins to show symptoms of infection, immediately spray with a fungicide. 
+	<br/>The fungicide is most effective when started at the first sign of infection. 
+	<br/>Two applications may be necessary. Contact your local extension office for advice regarding specific fungicides and their uses.
+	<br/>Several fungicides can be used to protect plants from infection. Mancozeb as a protectant and myclobutanil as an eradicant are generally effective against all rusts while triadimefon is effective against only specific rusts.
+	<br/>Bonide is a well-tolerated product that controls rust in the garden and other fungal diseases on trees, ornamentals, and crops. This ready-for-use copper soap spray kills rust on plants and is safe to use in your organic garden.
+
+
+	
+	</p>
+	</div>
+
+
+
+
+
+
+	<div id="sol1" class='bg-white' style="margin-top:20px;">
+	
+	<h2 class='text-danger' >Remediess for potato early blight</h2>
+	
+	<p class="justify-left" >
+	Spray leaves and stems with a preventative treatment such as Bayer Garden Blight Control.
+	
+	<br/>The best way to prevent potato blight is to plant a blight-resistant variety. 
+	
+	<br/>Some of our favorites include Colleen, Golden Wonder, and Kerr’s Pink. 
+	
+	<br/>Make sure potatoes are well earthed to prevent spores from getting into the tubers.
+	
+	<br/>Check regularly for symptoms of infection (as outlined above).
+	<br/>If only a small number of leaves are affected, you can remove and dispose of them.
+	<br/>Spray with Bayer Garden Blight Control, which can be used up to four times per growing season.
+	<br/>If the infection has spread, cut the foliage and stems. 
+	<br/>Removing the foliage prevents the disease from getting into the tubers, as long as they are well covered with earth.
+	<br/>Leave the crop for at least two weeks to let the blight spores on the surface die and the potatoes develop a thicker skin.
+	<br/>After harvest, check regularly for signs of blight and remove any suspect tubers from your store, immediately. 
+
+	</p>
+	</div>
+	
+	
+	<div id="sol2" class='bg-white' style="margin-top:20px;">
+	
+	<h2 class='text-danger' >Remediess for Tomato Bacterial Spot</h2>
+	
+	<p class="justify-left" >
+
+		There are no cures for systemically infected plants and these plants should be discarded.
+		<br/>Individual leaves with spots can be picked off and destroyed.
+		<br/>Copper fungicides will deny bacterial spot growth for two to four weeks after application. Use this type of fungicide after planting the seeds but before moving the plants into the garden or field.
+		<br/>Sprays should be applied before and after rains but not during the downfall. If bacterial spots are noticed, spray the plants for seven to 10 days, and again the day before transplanting. 
+		<br/>Products containing iprodione, chlorothalonil, mancozeb, fludioxonil, azoxystrobin, or penthiopyrad typically provide good control of leaf spot diseases.
+		
+	</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	<div id="sol3" class='bg-white' style="margin-top:20px;">
+	
+	<h2 class='text-danger' >Remediess for Tomato Mold leaf</h2>
+	
+	<p class="justify-left" >
+		<br/>Fungicides will NOT treat this viral disease.
+		<br/>Plant resistant varieties when available or purchase transplants from a reputable source.
+		<br/>Do NOT save seeds from infected crops.
+		<br/>Spot treat with least-toxic, natural pest control products, such as Safer Soap, Bon-Neem, and diatomaceous earth, to reduce the number of disease-carrying insects.
+		<br/>Harvest-Guard® row cover will help keep insect pests off vulnerable crops/ transplants and should be installed until bloom.
+		<br/>Remove all perennial weeds, using least-toxic herbicides, within 100 yards of your garden plot.
+		<br/>The virus can be spread through human activity, tools, and equipment. Frequently wash your hands and disinfect garden tools, stakes, ties, pots, greenhouse benches, etc. (one part bleach to 4 parts water) to reduce the risk of contamination.
+		<br/>Avoid working in the garden during damp conditions (viruses are easily spread when plants are wet).
+		<br/>Avoid using tobacco around susceptible plants. Cigarettes and other tobacco products may be infected and can spread the virus.
+		<br/>Remove and destroy all infected plants (see Fall Garden Cleanup). Do NOT compost.
+		
+		
+
+	</div>
+	
+
+	<div id="sol4" class='bg-white' style="margin-top:20px;display:none;">
+	
+		<h2 class='text-danger' >Remediess for Tomato Mosaic</h2>
+		
+		<p class="justify-left" >
+			<br/>Fungicides will NOT treat this viral disease.
+			<br/>Plant resistant varieties when available or purchase transplants from a reputable source.
+			<br/>Do NOT save seeds from infected crops.
+			<br/>Spot treat with least-toxic, natural pest control products, such as Safer Soap, Bon-Neem, and diatomaceous earth, to reduce the number of disease-carrying insects.
+			<br/>Harvest-Guard® row cover will help keep insect pests off vulnerable crops/ transplants and should be installed until bloom.
+			<br/>Remove all perennial weeds, using least-toxic herbicides, within 100 yards of your garden plot.
+			<br/>The virus can be spread through human activity, tools, and equipment. Frequently wash your hands and disinfect garden tools, stakes, ties, pots, greenhouse benches, etc. (one part bleach to 4 parts water) to reduce the risk of contamination.
+			<br/>Avoid working in the garden during damp conditions (viruses are easily spread when plants are wet).
+			<br/>Avoid using tobacco around susceptible plants. Cigarettes and other tobacco products may be infected and can spread the virus.
+			<br/>Remove and destroy all infected plants (see Fall Garden Cleanup). Do NOT compost.
+			
+			
+	
+		</div>
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+</body>
+{% endblock %}

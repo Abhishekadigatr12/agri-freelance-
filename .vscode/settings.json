@@ -1,0 +1,17 @@
+{
+  "python.analysis.typeCheckingMode": "off",
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.terminal.executeInFileDir": true,
+  "python.formatting.provider": "black",
+  "[python]": {
+    "defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe"
+  },
+  "jupyter.notebooks.cellToolbarLocation": "right",
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "notebook.kernelShutdownTime": 5000,
+  "python.createEnvironment.contentButton": "show",
+  "python.createEnvironment.trigger": "off"
+}

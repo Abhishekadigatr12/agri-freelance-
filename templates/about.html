@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block content %}
+
+
+
+<h2 class="text-danger" >&nbsp;About us</h2>
+
+<div class="container-fluid bg-primary"> 
+</div>
+
+<div class="container-fluid " id="details">
+
+    <h5>Use this app to find out plant diseases</h5>
+
+<p>
+several intelligent systems have already been proposed for the diagnosis of plant diseases. In this way, the plants and crops can be monitored in order to prevent the spread of diseases that can ruin the whole harvest. The symptoms of a disease include lesions or spots in various parts of the plant. The color, area and the number of these spots can determine to a great extent the disease of the plant or serve as a first stage diagnosis. In this paper, a mobile phone application for plant disease diagnosis is presented. It is based on the detection of the disease signature that is expressed as a number of rules that concern the color, the shape of the spots, historical weather data, etc. The disease signature format allows an agriculturist that acts as an end user of the developed application, to extend or customize the supported set of plant diseases. The developed application has been tested with similar performance on various plants including citrus and grapevines. In this paper, experimental results are presented on grape diseases with the accuracy in the plant disease classification exceeding 90%.1
+</p>
+</div>
+<style>
+img{
+width:300px;
+height:300px;
+}
+</style>
+
+<div class="container">
+
+	<div class="row">
+    <div class="col-sm">
+     <img   src="{{url_for('static',filename='plantimage.jpg')}}" />
+    </div>
+    
+
+
+</div>
+{% endblock %}
