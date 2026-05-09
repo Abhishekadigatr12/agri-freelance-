@@ -1,7 +1,7 @@
 {
   "python.analysis.typeCheckingMode": "off",
   "python.languageServer": "Pylance",
-  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.analysis.pythonPath": "${workspaceFolder}/venv/Scripts/python.exe",
   "python.terminal.executeInFileDir": true,
   "python.formatting.provider": "black",
   "[python]": {
@@ -9,9 +9,20 @@
   },
   "jupyter.notebooks.cellToolbarLocation": "right",
   "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "jupyter.pythonPath": "${workspaceFolder}/venv/Scripts/python.exe",
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
   "notebook.kernelShutdownTime": 5000,
+  "python.defaultInterpreterPath": "D:\\projects\\ML projects\\plant disease final\\venv\\Scripts\\python.exe",
   "python.createEnvironment.contentButton": "show",
-  "python.createEnvironment.trigger": "off"
+  "python.createEnvironment.trigger": "off",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/venv/Lib/site-packages"
+  ],
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.include": [],
+  "python.analysis.exclude": ["**/node_modules", "**/__pycache__"],
+  "python.analysis.reportMissingImports": false,
+  "python.analysis.reportMissingModuleSource": false,
+  "python.analysis.reportMissingTypeStubs": false
 }
