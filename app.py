@@ -7,6 +7,7 @@ import re
 import numpy as np
 import tensorflow as tf
 import tensorflow as tf
+from pathlib import Path
 
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
@@ -16,7 +17,7 @@ config.gpu_options.per_process_gpu_memory_fraction = 0.2
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 # Keras
-from tensorflow.keras.applications.resnet50 import preprocess_input
+from tensorflow.keras.applications.vgg16 import preprocess_input
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
@@ -34,6 +35,9 @@ MODEL_PATH ='./model_vgg16.h5'
 # Load your trained model
 model = load_model(MODEL_PATH)
 
+class_folders = sorted(glob.glob('./dataset/train/*'))
+class_names = [Path(folder).name for folder in class_folders]
+
 
 
 
@@ -43,15 +47,10 @@ def model_predict(img_path, model):
 
     # Preprocessing the image
     x = image.img_to_array(img)
-    # x = np.true_divide(x, 255)
-    ## Scaling
-    x=x/255
     x = np.expand_dims(x, axis=0)
-   
 
-    # Be careful how your trained model deals with the input
-    # otherwise, it won't make correct prediction!
-   # x = preprocess_input(x)
+    # Match the preprocessing used during VGG16 training
+    x = preprocess_input(x)
 
     preds = model.predict(x)
     preds=np.argmax(preds, axis=1)
@@ -60,19 +59,9 @@ def model_predict(img_path, model):
     preds=preds[0]
     print(f"Result of prediction = {preds}")
     
-    '''
-    if preds==0:
-        preds="corn common rust"
-    elif preds==1:
-        preds="Potato Early blight"
-    elif preds==2:
-        preds="Tomato Bacterial Spot"
-    elif preds==3:
-        preds="Tomato Mosaic Virus"
-    else:
-        preds="Tomato healthy"
-    '''
-    
+    if 0 <= preds < len(class_names):
+        return class_names[preds]
+
     return str(preds)
 
 
